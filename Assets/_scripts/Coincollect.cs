@@ -5,6 +5,8 @@ public class Coincollect : MonoBehaviour
 {
     [SerializeField] private AudioClip coinCollectSound;
     private AudioSource audioSource;
+
+    
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();

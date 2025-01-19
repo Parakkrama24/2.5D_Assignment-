@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -38,6 +39,14 @@ public class ScoreManager : MonoBehaviour
         else
         {
             Debug.LogWarning("ScoreText is not assigned in the inspector.");
+        }
+    }
+
+    private void Update()
+    {
+       if(score >= 10)
+        {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
