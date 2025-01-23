@@ -7,8 +7,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance { get; private set; }
 
     [SerializeField] private TMP_Text scoreText;
-    private int score = 0;
-
+    public int score = 0;
+    [SerializeField] private TMP_Text GuidText;
     private void Awake()
     {
         // Ensure there's only one instance of ScoreManager
@@ -44,9 +44,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-       if(score >= 10)
+       if(score >= 14)
         {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GuidText.text = "Reach to Finsh Point";
         }
     }
 }

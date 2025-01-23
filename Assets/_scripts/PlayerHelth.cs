@@ -35,7 +35,7 @@ public class PlayerHelth : MonoBehaviour
             audioSource.PlayOneShot(GameOver);
             Debug.Log("You Loos");
         }
-        else if(collision.gameObject.tag == "WinPoint")
+        else if(collision.gameObject.tag == "WinPoint" && ScoreManager.instance.score==10)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
